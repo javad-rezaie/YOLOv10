@@ -6,9 +6,21 @@
 # License: Apache License 2.0
 #
 
-DATA_DIR="/mnt/SSD2/coco_stuff10k/"
-OUT_DIR="$PWD/out"
-RUN_SCRIPT_DIR=$PWD/run_scripts/
+DATA_DIR="/mnt/SSD2/coco_stuff10k/" # In the container, it is acceable as /data
+#Data Structure on my local computer is as follows:
+#/mnt/SSD2/coco_stuff10k/
+#├── images/
+#├── train_coco.json
+#└── test_coco.json
+
+#It will be mapped to container, and it seems like:
+#/data/
+#├── images/
+#├── train_coco.json
+#└── test_coco.json
+
+OUT_DIR="$PWD/out" # In the container, it is acceable as /out
+RUN_SCRIPT_DIR=$PWD/run_scripts/ # In the container, it is acceable as /run_scripts
 
 
 docker run -it --rm \
