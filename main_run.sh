@@ -18,4 +18,4 @@ docker run -it --rm \
     --mount type=bind,source=$OUT_DIR,target=/out \
     --shm-size 8g \
     paddle:latest \
-    bash /run_scripts/train.sh
+    bash /run_scripts/$1
