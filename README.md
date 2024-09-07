@@ -38,7 +38,7 @@ bash jupyter.sh
 
 ## Modifying the Paths and GPU Configuration
 
-1. Update the `DATA_DIR` path inside the `train.sh` script to your appropriate local path where the dataset is located.
+1. Update the `DATA_DIR` path inside the `main_run.sh` script to your appropriate local path where the dataset is located.
 2. Update the `GPU` variable to the number of installed GPUs on your PC.
 
 ### Data Structure
@@ -59,14 +59,29 @@ Within the container, this directory is accessible as `/data` and will appear as
 
 The local path `/mnt/SSD2/coco_stuff10k/` is mapped to `/data/` inside the container.
 
+## Train
 
-## Tips
-Ensure that the `train.sh` and  `jupyter.sh` bash scripts has executable permissions. If not, grant execute permission by running `chmod u+x train.sh`.
+```bash
+bash main_run.sh train.sh
+```
 
-# Model Conversion to TensorRT
-## Converting to TensorRT
-Our trained YOLO model was converted to TensorRT format using the Model Optimizer tool. This streamlined the deployment process for NVIDIA-GPU hardware platforms.
+## Evaluation
 
+```bash
+bash main_run.sh eval.sh
+```
+
+## Export
+
+```bash
+bash main_run.sh export.sh
+```
+
+## Inference
+
+```bash
+bash main_run.sh infer.sh
+```
 
 ## Disclaimer
 

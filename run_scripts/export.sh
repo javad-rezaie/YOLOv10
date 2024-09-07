@@ -1,5 +1,5 @@
 model_name=yolov10
-job_name=yolov10_l_500e_coco # select a model
+job_name=yolov10_n_500e_coco # select a model
 
 # WORKDIR in the created container is /home/PaddleYOLO, 
 config=configs/${model_name}/${job_name}.yml #Relative path to /home/PaddleYOLO
