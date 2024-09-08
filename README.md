@@ -62,25 +62,25 @@ The local path `/mnt/SSD2/coco_stuff10k/` is mapped to `/data/` inside the conta
 ## Train
 
 ```bash
-bash main_run.sh train.sh
+bash main_run.sh train
 ```
 
 ## Evaluation
 
 ```bash
-bash main_run.sh eval.sh
+bash main_run.sh eval
 ```
 
 ## Export
 
 ```bash
-bash main_run.sh export.sh
+bash main_run.sh export
 ```
 
 ## Inference
 
 ```bash
-bash main_run.sh infer.sh
+bash main_run.sh infer
 ```
 
 ## Disclaimer

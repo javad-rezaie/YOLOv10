@@ -22,6 +22,7 @@ inference_results_dir=/out/inference_results
 
 
 image_path=/data/images/COCO_train2014_000000250645.jpg
+
 #https://www.pexels.com/video/footage-of-a-woman-in-the-kitchen-3770018/
 #video_path=/out/video/3770018-sd_960_540_25fps.mp4
 CUDA_VISIBLE_DEVICES=0 python deploy/python/infer.py --model_dir=${model_dir} --image_file=${image_path} --output_dir=${inference_results_dir} --save_images=True --device=GPU
